@@ -23,69 +23,74 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
-            ],
-            "styles": [
-              "src/styles.scss"
             ]
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
+          ,
+          "styles": [
+            "src/styles.scss"
+          ]
         },
-        "serve": {
-          "builder": "@angular/build:dev-server",
-          "configurations": {
-            "production": {
-              "buildTarget": "sanad-foundation:build:production"
-            },
-            "development": {
-              "buildTarget": "sanad-foundation:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
+        "configurations": {
+          "production": {
+            "budgets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "type": "initial",
+                "maximumWarning": "500kB",
+                "maximumError": "1MB"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "4kB",
+                "maximumError": "8kB"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "outputHashing": "all"
+          },
+          "development": {
+            "optimization": false,
+            "extractLicenses": false,
+            "sourceMap": true
           }
+        },
+        "defaultConfiguration": "production"
+      },
+      "serve": {
+        "builder": "@angular/build:dev-server",
+        "configurations": {
+          "production": {
+            "buildTarget": "sanad-foundation:build:production"
+          },
+          "development": {
+            "buildTarget": "sanad-foundation:build:development"
+          }
+        },
+        "defaultConfiguration": "development"
+      },
+      "extract-i18n": {
+        "builder": "@angular/build:extract-i18n"
+      },
+      "test": {
+        "builder": "@angular/build:karma",
+        "options": {
+          "tsConfig": "tsconfig.spec.json",
+          "inlineStyleLanguage": "scss",
+          "assets": [
+            {
+              "glob": "**/*",
+              "input": "public"
+            }
+          ],
+          "styles": [
+            "src/styles.scss"
+          ]
         }
       }
     }
   }
+},
+"cli": {
+  "analytics": "e5869a37-bb0a-410e-95ba-262a7fa7a7c9"
+}
 }

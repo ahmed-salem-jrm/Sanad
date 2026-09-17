@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+@mixin container {
+  width: min(100% - 32px, $container-width);
+  margin-inline: auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin transition {
+  transition: all $transition-normal;
+}
+
+@mixin hover-lift {
+  @include transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin section-spacing {
+  padding-block: 80px;
+
+  @media (max-width: 768px) {
+    padding-block: 55px;
+  }
+}

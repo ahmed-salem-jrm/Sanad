@@ -1,0 +1,772 @@
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero__background"></div>
+
+  <div class="hero__overlay"></div>
+
+  <div class="container hero__container">
+
+    <div class="hero__content">
+
+      <span class="hero__badge">
+
+        <span class="hero__badge-dot"></span>
+
+        {{ languageService.t().home.hero.badge }}
+
+      </span>
+
+
+      <h1 class="hero__title">
+
+        {{ languageService.t().home.hero.title }}
+
+      </h1>
+
+
+      <p class="hero__description">
+
+        {{ languageService.t().home.hero.description }}
+
+      </p>
+
+
+      <div class="hero__actions">
+
+        <a
+          routerLink="/projects"
+          class="hero__btn hero__btn--primary">
+
+          <span>
+            {{ languageService.t().home.hero.primaryButton }}
+          </span>
+
+          <span class="hero__arrow">
+            ←
+          </span>
+
+        </a>
+
+
+        <a
+          routerLink="/participate"
+          class="hero__btn hero__btn--secondary">
+
+          {{ languageService.t().home.hero.secondaryButton }}
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- <div class="hero__scroll">
+
+      <span>
+        {{ languageService.t().home.hero.scrollText }}
+      </span>
+
+      <span class="hero__scroll-line"></span>
+
+    </div> -->
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     STATS
+========================================================= -->
+
+<section class="stats-section">
+
+  <div class="container">
+
+    <div class="stats-grid">
+
+
+      <article class="stat-item">
+
+        <div class="stat-item__icon">
+          <span>♧</span>
+        </div>
+
+        <div class="stat-item__content">
+
+          <strong>
+            {{ languageService.t().home.stats.projectsValue }}
+          </strong>
+
+          <span>
+            {{ languageService.t().home.stats.projectsLabel }}
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="stat-item">
+
+        <div class="stat-item__icon">
+          <span>♙</span>
+        </div>
+
+        <div class="stat-item__content">
+
+          <strong>
+            {{ languageService.t().home.stats.beneficiariesValue }}
+          </strong>
+
+          <span>
+            {{ languageService.t().home.stats.beneficiariesLabel }}
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="stat-item">
+
+        <div class="stat-item__icon">
+          <span>♧</span>
+        </div>
+
+        <div class="stat-item__content">
+
+          <strong>
+            {{ languageService.t().home.stats.volunteersValue }}
+          </strong>
+
+          <span>
+            {{ languageService.t().home.stats.volunteersLabel }}
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <article class="stat-item">
+
+        <div class="stat-item__icon">
+          <span>★</span>
+        </div>
+
+        <div class="stat-item__content">
+
+          <strong>
+            {{ languageService.t().home.stats.yearsValue }}
+          </strong>
+
+          <span>
+            {{ languageService.t().home.stats.yearsLabel }}
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about-preview section">
+
+  <div class="container">
+
+    <div class="about-preview__grid">
+
+
+      <div class="about-preview__image">
+
+        <div class="about-preview__image-main">
+
+          <img
+            src="assets/images/about/about-main.jpg"
+            alt="">
+
+        </div>
+
+
+        <div class="about-preview__experience">
+
+          <strong>
+            {{ languageService.t().home.about.experienceValue }}
+          </strong>
+
+          <span>
+            {{ languageService.t().home.about.experienceLabel }}
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="about-preview__content">
+
+        <span class="section-label">
+
+          {{ languageService.t().home.about.badge }}
+
+        </span>
+
+
+        <h2 class="section-heading">
+
+          {{ languageService.t().home.about.title }}
+
+        </h2>
+
+
+        <p class="section-description">
+
+          {{ languageService.t().home.about.description }}
+
+        </p>
+
+
+        <div class="about-preview__features">
+
+          @for (
+            feature of languageService.t().home.about.features;
+            track feature.title
+          ) {
+
+            <div class="about-feature">
+
+              <span class="about-feature__icon">
+                ✓
+              </span>
+
+              <div>
+
+                <strong>
+                  {{ feature.title }}
+                </strong>
+
+                <span>
+                  {{ feature.description }}
+                </span>
+
+              </div>
+
+            </div>
+
+          }
+
+        </div>
+
+
+        <a
+          routerLink="/about"
+          class="outline-btn">
+
+          {{ languageService.t().home.about.button }}
+
+          <span>←</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FIELDS
+========================================================= -->
+
+<section class="fields-section section">
+
+  <div class="container">
+
+
+    <div class="section-header">
+
+      <div>
+
+        <span class="section-label">
+
+          {{ languageService.t().home.fields.badge }}
+
+        </span>
+
+
+        <h2 class="section-heading">
+
+          {{ languageService.t().home.fields.title }}
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-description">
+
+        {{ languageService.t().home.fields.description }}
+
+      </p>
+
+    </div>
+
+
+    <div class="fields-grid">
+
+      @for (
+        field of languageService.t().home.fields.items;
+        track field.number;
+        let i = $index
+      ) {
+
+        <a
+          routerLink="/fields"
+          class="field-card"
+          [class.field-card--large]="i === 0">
+
+          <div class="field-card__image">
+
+            <img
+              [src]="fieldImages[i]"
+              [alt]="field.title">
+
+          </div>
+
+
+          <div class="field-card__overlay"></div>
+
+
+          <div class="field-card__content">
+
+            <span class="field-card__number">
+
+              {{ field.number }}
+
+            </span>
+
+
+            <h3>
+
+              {{ field.title }}
+
+            </h3>
+
+
+            <p>
+
+              {{ field.description }}
+
+            </p>
+
+
+            <span class="field-card__arrow">
+              ←
+            </span>
+
+          </div>
+
+        </a>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section class="projects-section section">
+
+  <div class="container">
+
+
+    <div class="section-header section-header--center">
+
+      <span class="section-label">
+
+        {{ languageService.t().home.projects.badge }}
+
+      </span>
+
+
+      <h2 class="section-heading">
+
+        {{ languageService.t().home.projects.title }}
+
+      </h2>
+
+
+      <p class="section-description">
+
+        {{ languageService.t().home.projects.description }}
+
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+      @for (
+        project of languageService.t().home.projects.items;
+        track project.title;
+        let i = $index
+      ) {
+
+        <article class="project-card">
+
+
+          <div class="project-card__image">
+
+            <img
+              [src]="projectImages[i]"
+              [alt]="project.title">
+
+            <span class="project-card__category">
+
+              {{ project.category }}
+
+            </span>
+
+          </div>
+
+
+          <div class="project-card__content">
+
+            <span>
+
+              {{ project.type }}
+
+            </span>
+
+
+            <h3>
+
+              {{ project.title }}
+
+            </h3>
+
+
+            <p>
+
+              {{ project.description }}
+
+            </p>
+
+
+            <a routerLink="/projects">
+
+              {{ languageService.t().home.projects.detailsButton }}
+
+              <span>←</span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <div class="section-action">
+
+      <a
+        routerLink="/projects"
+        class="outline-btn">
+
+        {{ languageService.t().home.projects.button }}
+
+        <span>←</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUCCESS STORIES
+========================================================= -->
+
+<section class="success-section section">
+
+  <div class="container">
+
+
+    <div class="section-header section-header--center">
+
+      <span class="section-label">
+
+        {{ languageService.t().home.successStories.badge }}
+
+      </span>
+
+
+      <h2 class="section-heading">
+
+        {{ languageService.t().home.successStories.title }}
+
+      </h2>
+
+
+      <p class="section-description">
+
+        {{ languageService.t().home.successStories.description }}
+
+      </p>
+
+    </div>
+
+
+    <div class="success-grid">
+
+      @for (
+        story of languageService.t().home.successStories.items;
+        track story.name;
+        let i = $index
+      ) {
+
+        <article class="success-card">
+
+
+          <div class="success-card__image">
+
+            <img
+              [src]="successStoryImages[i]"
+              [alt]="story.name">
+
+          </div>
+
+
+          <div class="success-card__content">
+
+            <span class="success-card__quote">
+              “
+            </span>
+
+
+            <p>
+
+              {{ story.quote }}
+
+            </p>
+
+
+            <strong>
+
+              {{ story.name }}
+
+            </strong>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEWS
+========================================================= -->
+
+<section class="news-section section">
+
+  <div class="container">
+
+
+    <div class="section-header">
+
+      <div>
+
+        <span class="section-label">
+
+          {{ languageService.t().home.news.badge }}
+
+        </span>
+
+
+        <h2 class="section-heading">
+
+          {{ languageService.t().home.news.title }}
+
+        </h2>
+
+      </div>
+
+
+      <p class="section-description">
+
+        {{ languageService.t().home.news.description }}
+
+      </p>
+
+    </div>
+
+
+    <div class="news-grid">
+
+      @for (
+        news of languageService.t().home.news.items;
+        track news.title;
+        let i = $index
+      ) {
+
+        <article class="news-card">
+
+
+          <div class="news-card__image">
+
+            <img
+              [src]="newsImages[i]"
+              [alt]="news.title">
+
+
+            <span class="news-card__date">
+
+              {{ news.date }}
+
+            </span>
+
+          </div>
+
+
+          <div class="news-card__content">
+
+            <span>
+
+              {{ news.category }}
+
+            </span>
+
+
+            <h3>
+
+              {{ news.title }}
+
+            </h3>
+
+
+            <a routerLink="/news">
+
+              {{ languageService.t().home.news.detailsButton }}
+
+              <span>←</span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+
+    <div class="section-action">
+
+      <a
+        routerLink="/news"
+        class="outline-btn">
+
+        {{ languageService.t().home.news.button }}
+
+        <span>←</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+  <div class="cta-section__background"></div>
+
+  <div class="cta-section__overlay"></div>
+
+
+  <div class="container">
+
+    <div class="cta-section__content">
+
+
+      <span class="section-label">
+
+        {{ languageService.t().home.participate.badge }}
+
+      </span>
+
+
+      <h2>
+
+        {{ languageService.t().home.participate.title }}
+
+      </h2>
+
+
+      <p>
+
+        {{ languageService.t().home.participate.description }}
+
+      </p>
+
+
+      <a
+        routerLink="/participate"
+        class="cta-section__button">
+
+        {{ languageService.t().home.participate.button }}
+
+        <span>←</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

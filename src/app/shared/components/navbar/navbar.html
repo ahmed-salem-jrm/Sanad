@@ -1,0 +1,107 @@
+<header class="navbar">
+
+  <div class="navbar__container">
+
+    <a
+      class="navbar__logo"
+      routerLink="/"
+      (click)="closeMenu()">
+
+      <img
+        src="./assets/logo/sanad-logo.png"
+        [alt]="languageService.t().navbar.about">
+
+    </a>
+
+    <nav class="navbar__links">
+
+      @for (item of navItems; track item.route) {
+
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{
+            exact: item.route === '/'
+          }">
+
+          {{ languageService.t().navbar[item.key] }}
+
+        </a>
+
+      }
+
+    </nav>
+
+    <div class="navbar__actions">
+
+      <button
+        type="button"
+        class="action-btn"
+        (click)="toggleTheme()"
+        [attr.aria-label]="
+          themeService.isDark()
+            ? languageService.t().navbar.lightMode
+            : languageService.t().navbar.darkMode
+        ">
+
+        @if (themeService.isDark()) {
+          <span>☀</span>
+        } @else {
+          <span>☾</span>
+        }
+
+      </button>
+
+      <button
+        type="button"
+        class="language-btn"
+        (click)="toggleLanguage()">
+
+        {{ languageService.t().navbar.language }}
+
+      </button>
+
+      <button
+        type="button"
+        class="menu-btn"
+        [class.open]="menuOpen"
+        (click)="toggleMenu()"
+        [attr.aria-label]="
+          menuOpen
+            ? languageService.t().navbar.closeMenu
+            : languageService.t().navbar.openMenu
+        ">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    class="mobile-menu"
+    [class.open]="menuOpen">
+
+    @for (item of navItems; track item.route) {
+
+      <a
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{
+          exact: item.route === '/'
+        }"
+        (click)="closeMenu()">
+
+        {{ languageService.t().navbar[item.key] }}
+
+      </a>
+
+    }
+
+  </div>
+
+</header>

@@ -38,7 +38,7 @@
       linear-gradient(
         90deg,
         rgba(10, 32, 22, 0.92) 0%,
-        rgba(15, 48, 32, 0.78) 42%,
+        #442443c7 42%,
         rgba(15, 48, 32, 0.35) 72%,
         rgba(15, 48, 32, 0.18) 100%
       );
@@ -439,7 +439,7 @@
 
   border-radius: $radius-sm;
 
-  color: $primary;
+  color: --text-primary;
 
   font-size: 14px;
   font-weight: 700;
@@ -1197,7 +1197,7 @@
       linear-gradient(
         90deg,
         rgba(10, 32, 22, 0.94),
-        rgba(15, 48, 32, 0.78)
+        rgba(150, 11, 136, 0.78)
       );
   }
 
@@ -1430,7 +1430,7 @@
         linear-gradient(
           90deg,
           rgba(10, 32, 22, 0.93),
-          rgba(15, 48, 32, 0.72)
+          rgb(50 17 57 / 72%)
         );
     }
 

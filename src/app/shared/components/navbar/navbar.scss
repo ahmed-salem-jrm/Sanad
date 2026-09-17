@@ -40,62 +40,24 @@
 &__logo {
   width: 70px;
   height: 68px;
-
   display: flex;
   align-items: center;
-
+  justify-content: center;
   flex-shrink: 0;
-
   position: relative;
   z-index: 2;
 
-  &::before {
-    content: '';
-
-    position: absolute;
-
-    inset-inline-start: 0;
-    top: 50%;
-
-    width: 62px;
-    height: 62px;
-
-    transform: translateY(-50%);
-
-    border-radius: 50%;
-
-    background: $white;
-
-    // border: 3px solid $primary;
-
-    box-shadow:
-      0 4px 14px rgba(31, 93, 66, 0.15);
-
-    z-index: -1;
-  }
-
   img {
     display: block;
-
     width: 62px;
     height: 62px;
-
-    padding: 6px;
-
     object-fit: contain;
     object-position: center;
 
-    border-radius: 50%;
-
-    transition:
-      transform $transition-normal,
-      box-shadow $transition-normal;
+    transition: transform $transition-normal;
 
     &:hover {
       transform: scale(1.05);
-
-      box-shadow:
-        0 6px 18px rgba(31, 93, 66, 0.20);
     }
   }
 }
@@ -438,7 +400,7 @@
     width: 38px;
     height: 38px;
 
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .menu-btn {
@@ -464,7 +426,7 @@
   }
 
   // Hide language on very small screens
-  .language-btn {
-    display: none;
-  }
+  // .language-btn {
+  //   display: none;
+  // }
 }

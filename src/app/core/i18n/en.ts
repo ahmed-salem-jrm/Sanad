@@ -262,7 +262,7 @@ export const en = {
     },
 
     contact: 'Contact Us',
-
+    location: 'Al Salehia Al Qadima/Sharqia/Egypt',
     copyright:
       'All Rights Reserved © Sanad Foundation for Development'
   }

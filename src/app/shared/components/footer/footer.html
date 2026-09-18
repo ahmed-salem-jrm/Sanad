@@ -1,1 +1,139 @@
-<!-- <p>footer works!</p> -->
+<footer class="footer" [attr.dir]="ls.dir()">
+
+    <div class="footer-container">
+
+        <!-- Logo & Description -->
+        <div class="footer-brand">
+
+            <a class="footer-logo" routerLink="/">
+                <img src="../../../../assets/logo/sanad-logo.png" alt="مؤسسة سند للتنمية" />
+            </a>
+
+            <p class="footer-description">
+                {{ t().footer.description }}
+            </p>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+
+            <h3 class="footer-title">
+                {{ t().footer.quickLinks }}
+            </h3>
+
+            <ul class="footer-links">
+
+                @for (key of linkKeys; track key) {
+                <li>
+                    <a href="#">
+                        {{ t().footer.links[key] }}
+                    </a>
+                </li>
+                }
+
+            </ul>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3 class="footer-title">
+                {{ t().footer.contact }}
+            </h3>
+
+            <ul class="footer-contact">
+
+                <li>
+                    <span class="contact-icon">
+                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                        <img src="../../../../assets/icons/location-pin-svgrepo-com.svg">
+                    </span>
+
+                    <span>
+                        {{t().footer.location}}
+                    </span>
+                </li>
+
+                <li>
+                    <span class="contact-icon">
+                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                        <img src="../../../../assets/icons/phone-svgrepo-com.svg">
+                    </span>
+
+                    <a href="tel:+201033103060">
+                        +20 1033103060
+                    </a>
+                </li>
+
+                <li>
+                    <span class="contact-icon">
+                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                        <img src="../../../../assets/icons/email-mail-svgrepo-com.svg">
+                    </span>
+
+                    <a href="mailto:info@sanad.org">
+                        info@sanad.org
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-column footer-social-column">
+
+            <h3 class="footer-title">
+                {{ t().footer.contact }}
+            </h3>
+
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/SnaadOrgFB" class="social-icon" aria-label="Facebook">
+                    <img src="../../../../assets/icons/facebook-svgrepo-com.svg" alt="Facebook">
+                </a>
+
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fsnaadorg%3Ffbclid%3DIwcGRvZgVleHRuA2FlbQIxMABicmlkETFuN05PcldYNmhqbDRMdWJkc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkuS_T_NuGq24aRt3Gjbv7a3gnxamyA52qAtbUIjIIkkc2ObWsYhvGjylURX_aem_xp_ZpSwrqXphC2rL0QA4Ag&h=AUAdM-vQB8qpmoKUoOlvc0B4D13_SucJOrQe0-h91rag_2nxiQG_kBOMzYQzqOK0f0qpgqAx_7cd5GmFgZRlS-3Mzzz9EQSM13dkp0WEZ8Sn0OPYBMHVkrpiMk9MQ32cnqo3" class="social-icon" aria-label="Instagram">
+                    <img src="../../../../assets/icons/instagram-logo-svgrepo-com.svg" alt="Instagram">
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p class="copyright">
+                {{ t().footer.copyright }}
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a routerLink="/">
+                    {{ t().footer.links.home }}
+                </a>
+
+                <span class="separator">|</span>
+
+                <a routerLink="/contact">
+                    {{ t().footer.links.contact }}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

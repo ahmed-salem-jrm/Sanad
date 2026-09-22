@@ -157,7 +157,7 @@
 
   font-size: 20px;
 
-  color: $text-primary;
+  color: var(--logo-color);
 
   transition:
     background $transition-fast,
@@ -179,22 +179,22 @@
 
   padding: 0 9px;
 
-  border: 1px solid $border-color;
+  border: 1px solid var(--logo-color);
   border-radius: $radius-sm;
 
-  color: $primary;
+  color:var(--logo-color);
 
   font-size: 13px;
   font-weight: 700;
 
   transition: all $transition-fast;
 
-  &:hover {
-    background: $primary;
-    color: $white;
+  // &:hover {
+  //   background: $primary;
+  //   color: $white;
 
-    border-color: $primary;
-  }
+  //   border-color: $primary;
+  // }
 }
 
 // ==========================================
@@ -218,7 +218,7 @@
     width: 100%;
     height: 2px;
 
-    background: $primary;
+    background:var(--logo-color);
 
     transition: all $transition-normal;
   }
@@ -429,4 +429,23 @@
   // .language-btn {
   //   display: none;
   // }
+}
+
+.navbar-logo {
+  width: 150px;
+  height: 70px;
+
+  background-color: var(--logo-color);
+
+  -webkit-mask-image: url('/assets/logo/sanad-logo.png');
+  mask-image: url('/assets/logo/sanad-logo.png');
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }

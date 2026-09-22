@@ -35,13 +35,11 @@
     inset: 0;
 
     background:
-      linear-gradient(
-        90deg,
+      linear-gradient(90deg,
         rgba(10, 32, 22, 0.92) 0%,
         #442443c7 42%,
         rgba(15, 48, 32, 0.35) 72%,
-        rgba(15, 48, 32, 0.18) 100%
-      );
+        rgba(15, 48, 32, 0.18) 100%);
   }
 
   &__container {
@@ -236,11 +234,9 @@
     height: 45px;
 
     background:
-      linear-gradient(
-        to bottom,
+      linear-gradient(to bottom,
         $secondary,
-        transparent
-      );
+        transparent);
   }
 }
 
@@ -512,11 +508,9 @@
       inset: 0;
 
       background:
-        linear-gradient(
-          180deg,
+        linear-gradient(180deg,
           transparent 60%,
-          rgba(10, 32, 22, 0.18)
-        );
+          rgba(10, 32, 22, 0.18));
 
       pointer-events: none;
     }
@@ -702,11 +696,9 @@
     inset: 0;
 
     background:
-      linear-gradient(
-        180deg,
+      linear-gradient(180deg,
         rgba(10, 32, 22, 0.08) 15%,
-        rgba(10, 32, 22, 0.82) 100%
-      );
+        rgba(10, 32, 22, 0.82) 100%);
   }
 
   &__content {
@@ -847,12 +839,12 @@
   &__category {
     position: absolute;
 
-    top: 18px;
+    top: 8px;
 
     inset-inline-start: 18px;
-
-    padding: 6px 12px;
-
+    
+    padding: 2px 9px;
+    
     border-radius: 50px;
 
     background: $secondary;
@@ -866,7 +858,7 @@
   &__content {
     padding: 25px;
 
-    > span {
+    >span {
       display: block;
 
       margin-bottom: 8px;
@@ -1103,7 +1095,7 @@
   &__content {
     padding: 24px;
 
-    > span {
+    >span {
       display: block;
 
       margin-bottom: 8px;
@@ -1194,11 +1186,9 @@
     inset: 0;
 
     background:
-      linear-gradient(
-        90deg,
+      linear-gradient(90deg,
         rgba(10, 32, 22, 0.94),
-        rgba(150, 11, 136, 0.78)
-      );
+        rgba(150, 11, 136, 0.78));
   }
 
   .container {
@@ -1323,6 +1313,7 @@
 }
 
 @keyframes scrollHint {
+
   0%,
   100% {
     transform: translateY(0);
@@ -1427,11 +1418,9 @@
 
     &__overlay {
       background:
-        linear-gradient(
-          90deg,
+        linear-gradient(90deg,
           rgba(10, 32, 22, 0.93),
-          rgb(50 17 57 / 72%)
-        );
+          rgb(50 17 57 / 72%));
     }
 
     &__content {

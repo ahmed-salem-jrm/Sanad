@@ -8,7 +8,7 @@ export const en = {
     news: 'News',
     participate: 'Get Involved',
     contact: 'Contact Us',
-    language: 'ع',
+    language: 'AR',
     lightMode: 'Light Mode',
     darkMode: 'Dark Mode',
     openMenu: 'Open Menu',
